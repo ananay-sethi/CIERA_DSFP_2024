@@ -1,7 +1,7 @@
 To run this example on your machine: 
 
 ```
-cd <directory with simple_example/ files> 
+cd <directory with simple_cube_example/ files> 
 python -m http.server 
 ```
 

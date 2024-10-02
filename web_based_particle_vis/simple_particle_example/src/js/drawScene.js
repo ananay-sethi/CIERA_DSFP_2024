@@ -21,20 +21,24 @@ export function drawScene(){
 		vertices.push(d.x, d.y, d.z);
 		//color by distance
 		var dist = Math.sqrt(d.x*d.x + d.y*d.y + d.z*d.z);
-		colors.push(new THREE.Color(cmap(dist)));
+		var co = new THREE.Color(cmap(dist))
+		colors.push(co.r, co.g, co.b);
 
 	});
 
 	//define the geometry
 	var geometry = new THREE.BufferGeometry();
 	geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+	geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 
-	var materialParams = {size: params.size,
-						  map: params.sprite, 
-						  transparent: true,
-						  alphaTest: params.alphaTest,
-						  sizeAttenuation: params.sizeAttenuation,
-						  vertexColors: THREE.VertexColors };
+	var materialParams = {
+		size: params.size,
+		map: params.sprite, 
+		transparent: true,
+		alphaTest: params.alphaTest,
+		sizeAttenuation: params.sizeAttenuation,
+		vertexColors: true 
+	};
 	var material = new THREE.PointsMaterial( materialParams );
 	var mesh = new THREE.Points( geometry, material );
 
