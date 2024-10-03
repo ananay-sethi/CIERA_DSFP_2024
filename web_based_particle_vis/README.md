@@ -4,10 +4,10 @@ In this workshop, we will cover the basics of visualization particle data on the
 
 ## Exercise
 
-1. Download/generate/use your own data that has x,y,z and other attributes
-	- Suggestion: Gaia data (e.g., for a galactic open cluster)
-2. Ingest this into Firefly and explore it in a Jupyter notebook
-	- Make sure to include attributes to color/filter by
-4. Use the (new) data selection tool to select a portion of your data using Firefly
+1. Download/generate/use your own data that has x,y,z and other attributes.
+	- *Suggestion:* Gaia data (e.g., for a galactic open cluster)
+2. Ingest this into Firefly and explore it in a Jupyter notebook.
+	- Make sure to include attributes to color/filter by.
+4. Use the (new) data selection tool to select a portion of your data using Firefly.
 5. Create a plot of these selected data using Python.
 6. Share the result with us!
